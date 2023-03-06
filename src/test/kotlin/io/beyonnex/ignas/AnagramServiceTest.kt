@@ -46,6 +46,11 @@ class AnagramServiceTest {
         assertTrue(anagramService.isAnagram(text1, text2))
     }
 
+    @Test
+    fun `should return true with special chars`() {
+        assertTrue(anagramService.isAnagram("Lorin Morgan-Richards", "Marcil d'Hirson Garron"))
+    }
+
     @ParameterizedTest
     @CsvSource(
         "One, Two",

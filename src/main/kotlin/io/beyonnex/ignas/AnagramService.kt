@@ -12,7 +12,7 @@ class AnagramService {
     }
 
     private fun stringToSortedCharArray(input: String): CharArray {
-        return input.replace("\\s".toRegex(), "")
+        return input.replace("[^a-zA-Z]+".toRegex(), "")
             .lowercase()
             .toCharArray()
             .sortedArray()
